@@ -77,24 +77,80 @@ class cmd(object):
         # listen for new command
         if self.status == "new_cmd":
             # check for trigger words
-            if msg.data == "move left":
+            if msg.data == "turn left ninety":
                 # ask to confirm operation
-                self.engine.say('Please confirm left rotate.')
+                self.engine.say('Confirm left turn ninety.')
                 self.engine.iterate()
                 # set status accordingly
-                self.status = "await_confirm_left"
-            if msg.data == "move right":
-                self.engine.say('Please confirm right rotate.')
+                self.status = "await_confirm_left_ninety"
+            if msg.data == "turn right ninety":
+                self.engine.say('Confirm right turn ninety.')
                 self.engine.iterate()
-                self.status = "await_confirm_right"
-            if msg.data == "move forward one meter":
-                self.engine.say('Please confirm forward.')
+                self.status = "await_confirm_right_ninety"
+            if msg.data == "turn left sixty":
+                self.engine.say('Confirm left turn sixty.')
+                self.engine.iterate()
+                self.status = "await_confirm_left_sixty"
+            if msg.data == "turn right sixty":
+                self.engine.say('Confirm right turn sixty.')
+                self.engine.iterate()
+                self.status = "await_confirm_right_sixty"
+            if msg.data == "turn left thirty":
+                self.engine.say('Confirm left turn thirty.')
+                self.engine.iterate()
+                self.status = "await_confirm_left_thirty"
+            if msg.data == "turn right thirty":
+                self.engine.say('Confirm right turn thirty.')
+                self.engine.iterate()
+                self.status = "await_confirm_right_thirty"
+            if msg.data == "forward one meter":
+                self.engine.say('Confirm forward one.')
                 self.engine.iterate()
                 self.status = "await_confirm_one"
-            if msg.data == "move forward three meter":
-                self.engine.say('Please confirm forward.')
+            if msg.data == "forward two meters":
+                self.engine.say('Confirm forward two.')
+                self.engine.iterate()
+                self.status = "await_confirm_two"
+            if msg.data == "forward three meters":
+                self.engine.say('Confirm forward three.')
                 self.engine.iterate()
                 self.status = "await_confirm_three"
+            if msg.data == "forward four meters":
+                self.engine.say('Confirm forward four.')
+                self.engine.iterate()
+                self.status = "await_confirm_four"
+            if msg.data == "forward five meters":
+                self.engine.say('Confirm forward five.')
+                self.engine.iterate()
+                self.status = "await_confirm_five"
+            if msg.data == "forward six meters":
+                self.engine.say('Confirm forward six.')
+                self.engine.iterate()
+                self.status = "await_confirm_six"
+            if msg.data == "backward one meter":
+                self.engine.say('Confirm backward one.')
+                self.engine.iterate()
+                self.status = "await_confirm_backward_one"
+            if msg.data == "backward two meters":
+                self.engine.say('Confirm backward two.')
+                self.engine.iterate()
+                self.status = "await_confirm_backward_two"
+            if msg.data == "backward three meters":
+                self.engine.say('Confirm backward three.')
+                self.engine.iterate()
+                self.status = "await_confirm_backward_three"
+            if msg.data == "backward four meters":
+                self.engine.say('Confirm backward four.')
+                self.engine.iterate()
+                self.status = "await_confirm_backward_four"
+            if msg.data == "backward five meters":
+                self.engine.say('Confirm backward five.')
+                self.engine.iterate()
+                self.status = "await_confirm_backward_five"
+            if msg.data == "backward six meters":
+                self.engine.say('Confirm backward six.')
+                self.engine.iterate()
+                self.status = "await_confirm_backward_six"
             if msg.data == "feedback battery":
                 # status feedback, doesn't need confirmation
                 # dummy value, needs fitting topic subscription
@@ -103,42 +159,158 @@ class cmd(object):
                 self.engine.iterate()
         else:
             # if confirmation is awaited
-            if self.status == "await_confirm_left":
+            if self.status == "await_confirm_left_ninety":
                 # check for correct confirmation
                 if msg.data == "confirm":
-                    print("rotate left.")
+                    print("turn left.")
                     # create Twist msg and publish
                     self.msg.linear.x = 0
                     self.msg.linear.y = 0
                     self.msg.linear.z = 0
                     self.msg.angular.z = 1.570796
                     self.pub.publish(self.msg)
-            if self.status == "await_confirm_right":
+            if self.status == "await_confirm_left_sixty":
+                # check for correct confirmation
                 if msg.data == "confirm":
-                    print("rotate right.")
+                    print("turn left.")
+                    # create Twist msg and publish
+                    self.msg.linear.x = 0
+                    self.msg.linear.y = 0
+                    self.msg.linear.z = 0
+                    self.msg.angular.z = 1.070796
+                    self.pub.publish(self.msg)
+            if self.status == "await_confirm_left_thirty":
+                # check for correct confirmation
+                if msg.data == "confirm":
+                    print("turn left.")
+                    # create Twist msg and publish
+                    self.msg.linear.x = 0
+                    self.msg.linear.y = 0
+                    self.msg.linear.z = 0
+                    self.msg.angular.z = 0.570796
+                    self.pub.publish(self.msg)
+            if self.status == "await_confirm_right_ninety":
+                if msg.data == "confirm":
+                    print("turn right.")
                     # create Twist msg and publish
                     self.msg.linear.x = 0
                     self.msg.linear.y = 0
                     self.msg.linear.z = 0
                     self.msg.angular.z = -1.570796
                     self.pub.publish(self.msg)
+            if self.status == "await_confirm_right_sixty":
+                if msg.data == "confirm":
+                    print("turn right.")
+                    # create Twist msg and publish
+                    self.msg.linear.x = 0
+                    self.msg.linear.y = 0
+                    self.msg.linear.z = 0
+                    self.msg.angular.z = -1.070796
+                    self.pub.publish(self.msg)
+            if self.status == "await_confirm_right_thirty":
+                if msg.data == "confirm":
+                    print("turn right.")
+                    # create Twist msg and publish
+                    self.msg.linear.x = 0
+                    self.msg.linear.y = 0
+                    self.msg.linear.z = 0
+                    self.msg.angular.z = -0.570796
+                    self.pub.publish(self.msg)
             if self.status == "await_confirm_one":
                 if msg.data == "confirm":
-                    print("drive forward.")
+                    print("forward one meter.")
                     self.msg.linear.x = 1
+                    self.msg.linear.y = 0
+                    self.msg.linear.z = 0
+                    self.msg.angular.z = 0
+                    self.pub.publish(self.msg)
+            if self.status == "await_confirm_two":
+                if msg.data == "confirm":
+                    print("forward one meter.")
+                    self.msg.linear.x = 2
                     self.msg.linear.y = 0
                     self.msg.linear.z = 0
                     self.msg.angular.z = 0
                     self.pub.publish(self.msg)
             if self.status == "await_confirm_three":
                 if msg.data == "confirm":
-                    print("drive forward.")
+                    print("forward three meters.")
                     self.msg.linear.x = 3
                     self.msg.linear.y = 0
                     self.msg.linear.z = 0
                     self.msg.angular.z = 0
                     self.pub.publish(self.msg)
-
+            if self.status == "await_confirm_four":
+                if msg.data == "confirm":
+                    print("forward four meter.")
+                    self.msg.linear.x = 4
+                    self.msg.linear.y = 0
+                    self.msg.angular.z = 0
+                    self.pub.publish(self.msg)
+            if self.status == "await_confirm_five":
+                if msg.data == "confirm":
+                    print("forward five meter.")
+                    self.msg.linear.x = 5
+                    self.msg.linear.y = 0
+                    self.msg.linear.z = 0
+                    self.msg.angular.z = 0
+                    self.pub.publish(self.msg)
+            if self.status == "await_confirm_six":
+                if msg.data == "confirm":
+                    print("forward six meter.")
+                    self.msg.linear.x = 6
+                    self.msg.linear.y = 0
+                    self.msg.linear.z = 0
+                    self.msg.angular.z = 0
+                    self.pub.publish(self.msg)
+            if self.status == "await_confirm_backward_one":
+                if msg.data == "confirm":
+                    print("backward one meter.")
+                    self.msg.linear.x = -1
+                    self.msg.linear.y = 0
+                    self.msg.linear.z = 0
+                    self.msg.angular.z = 0
+                    self.pub.publish(self.msg)
+            if self.status == "await_confirm_backward_two":
+                if msg.data == "confirm":
+                    print("backward two meters.")
+                    self.msg.linear.x = -2
+                    self.msg.linear.y = 0
+                    self.msg.linear.z = 0
+                    self.msg.angular.z = 0
+                    self.pub.publish(self.msg)
+            if self.status == "await_confirm_backward_three":
+                if msg.data == "confirm":
+                    print("backward three meters.")
+                    self.msg.linear.x = -3
+                    self.msg.linear.y = 0
+                    self.msg.linear.z = 0
+                    self.msg.angular.z = 0
+                    self.pub.publish(self.msg)
+            if self.status == "await_confirm_backward_four":
+                if msg.data == "confirm":
+                    print("backward four meters.")
+                    self.msg.linear.x = -4
+                    self.msg.linear.y = 0
+                    self.msg.linear.z = 0
+                    self.msg.angular.z = 0
+                    self.pub.publish(self.msg)
+            if self.status == "await_confirm_backward_five":
+                if msg.data == "confirm":
+                    print("backward five meters.")
+                    self.msg.linear.x = -5
+                    self.msg.linear.y = 0
+                    self.msg.linear.z = 0
+                    self.msg.angular.z = 0
+                    self.pub.publish(self.msg)
+            if self.status == "await_confirm_backward_six":
+                if msg.data == "confirm":
+                    print("backward six meters.")
+                    self.msg.linear.x = -6
+                    self.msg.linear.y = 0
+                    self.msg.linear.z = 0
+                    self.msg.angular.z = 0
+                    self.pub.publish(self.msg)
             # reset status
             self.status = "new_cmd"
 
