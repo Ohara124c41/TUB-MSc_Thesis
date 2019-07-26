@@ -1,0 +1,20 @@
+<package>
+  <name>speech_cmd</name>
+  <version>0.1.0</version>
+  <description>
+    This package is providing a simple interface/mapper between the speech
+    recognizer package "pocketsphinx" and rover controls.
+  </description>
+  <author>Alex, Justus, Lukas</author>
+  <maintainer email="seidel.1@campus.tu-berlin.de">Lukas Seidel</maintainer>
+  <license>MIT</license>
+  <url type="website"></url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>std_srvs</run_depend>
+  <run_depend>geometry_msgs</run_depend><!-- only needed for demos -->
+  <run_depend>pocketsphinx</run_depend>
+</package>

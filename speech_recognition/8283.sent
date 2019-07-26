@@ -1,0 +1,67 @@
+<s> FORWARD </s>
+<s> BACKWARD </s>
+<s> LEFT </s>
+<s> RIGHT </s>
+<s> TURN </s>
+<s> DEGREES </s>
+<s> METERS </s>
+<s> ONE </s>
+<s> TWO </s>
+<s> THREE </s>
+<s> FOUR </s>
+<s> FIVE </s>
+<s> SIX </s>
+<s> SEVEN </s>
+<s> EIGHT </s>
+<s> NINE </s>
+<s> TEN </s>
+<s> THIRTY </s>
+<s> SIXTY </s>
+<s> NINETY </s>
+<s> SECONDS </s>
+<s> <s> FORWARD ONE SECONDS </s> </s>
+<s> <s> FORWARD TWO SECONDS </s> </s>
+<s> <s> FORWARD THREE SECONDS </s> </s>
+<s> <s> FORWARD FOUR SECONDS </s> </s>
+<s> <s> FORWARD FIVE SECONDS </s> </s>
+<s> <s> FORWARD SIX SECONDS </s> </s>
+<s> <s> FORWARD SEVEN SECONDS </s> </s>
+<s> <s> FORWARD EIGHT SECONDS </s> </s>
+<s> <s> FORWARD NINE SECONDS </s> </s>
+<s> <s> FORWARD TEN SECONDS </s> </s>
+<s> <s> BACKWARD ONE SECONDS </s> </s>
+<s> <s> BACKWARD TWO SECONDS </s> </s>
+<s> <s> BACKWARD THREE SECONDS </s> </s>
+<s> <s> BACKWARD FOUR SECONDS </s> </s>
+<s> <s> BACKWARD FIVE SECONDS </s> </s>
+<s> <s> BACKWARD SIX SECONDS </s> </s>
+<s> <s> BACKWARD SEVEN SECONDS </s> </s>
+<s> <s> BACKWARD EIGHT SECONDS </s> </s>
+<s> <s> BACKWARD NINE SECONDS </s> </s>
+<s> <s> BACKWARD TEN SECONDS </s> </s>
+<s> <s> FORWARD ONE METERS </s> </s>
+<s> <s> FORWARD TWO METERS </s> </s>
+<s> <s> FORWARD THREE METERS </s> </s>
+<s> <s> FORWARD FOUR METERS </s> </s>
+<s> <s> FORWARD FIVE METERS </s> </s>
+<s> <s> FORWARD SIX METERS </s> </s>
+<s> <s> FORWARD SEVEN METERS </s> </s>
+<s> <s> FORWARD EIGHT METERS </s> </s>
+<s> <s> FORWARD NINE METERS </s> </s>
+<s> <s> FORWARD TEN METERS </s> </s>
+<s> <s> BACKWARD ONE METERS </s> </s>
+<s> <s> BACKWARD TWO METERS </s> </s>
+<s> <s> BACKWARD THREE METERS </s> </s>
+<s> <s> BACKWARD FOUR METERS </s> </s>
+<s> <s> BACKWARD FIVE METERS </s> </s>
+<s> <s> BACKWARD SIX METERS </s> </s>
+<s> <s> BACKWARD SEVEN METERS </s> </s>
+<s> <s> BACKWARD EIGHT METERS </s> </s>
+<s> <s> BACKWARD NINE METERS </s> </s>
+<s> <s> BACKWARD TEN METERS </s> </s>
+<s> <s> TURN LEFT THIRTY DEGREES </s> </s>
+<s> <s> TURN LEFT SIXTY DEGREES </s> </s>
+<s> <s> TURN LEFT NINETY DEGREES </s> </s>
+<s> <s> TURN RIGHT THIRTY DEGREES </s> </s>
+<s> <s> TURN RIGHT SIXTY DEGREES </s> </s>
+<s> <s> TURN RIGHT NINETY DEGREES </s> </s>

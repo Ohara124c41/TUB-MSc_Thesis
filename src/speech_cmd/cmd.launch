@@ -1,0 +1,6 @@
+<launch>
+
+  <node name="cmd" pkg="speech_cmd" type="cmd.py" output="screen">
+  </node>
+
+</launch>
