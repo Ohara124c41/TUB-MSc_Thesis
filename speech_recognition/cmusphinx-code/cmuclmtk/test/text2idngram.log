@@ -1,0 +1,45 @@
+text2idngram
+Vocab                  : English/emma11.vocab
+Output idngram         : ./English/emma11.txt.filtered.idngram.32bits
+N-gram buffer size     : 100
+Hash table size        : 2000000
+Temp directory         : cmuclmtk-xnUHJw
+Max open files         : 20
+FOF size               : 10
+n                      : 3
+Initialising hash table...
+Reading vocabulary... 
+Allocating memory for the n-gram buffer...
+Reading text into the n-gram buffer...
+20,000 n-grams processed for each ".", 1,000,000 for each line.
+........
+Sorting n-grams...
+Writing sorted n-grams to temporary file cmuclmtk-xnUHJw/1
+Merging 1 temporary files...
+
+2-grams occurring:	N times		> N times	Sug. -spec_num value
+      0						  64355		  65008
+      1				  45987		  18368		  18561
+      2				   8214		  10154		  10265
+      3				   3177		   6977		   7056
+      4				   1764		   5213		   5275
+      5				   1081		   4132		   4183
+      6				    699		   3433		   3477
+      7				    523		   2910		   2949
+      8				    400		   2510		   2545
+      9				    318		   2192		   2223
+     10				    231		   1961		   1990
+
+3-grams occurring:	N times		> N times	Sug. -spec_num value
+      0						 131483		 132807
+      1				 116614		  14869		  15027
+      2				   8904		   5965		   6034
+      3				   2574		   3391		   3434
+      4				   1162		   2229		   2261
+      5				    645		   1584		   1609
+      6				    376		   1208		   1230
+      7				    234		    974		    993
+      8				    187		    787		    804
+      9				    128		    659		    675
+     10				    113		    546		    561
+text2idngram : Done.

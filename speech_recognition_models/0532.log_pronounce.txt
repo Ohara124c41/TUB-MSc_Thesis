@@ -1,0 +1,27 @@
+I think this is a non-word: </S>
+LtoS pronounce: verbosity is 1
+LETTER-S - Morpheme: LETTER-S 
+I think this is a non-word: <S>
+LETTER-S - Morpheme: LETTER-S 
+BACKWARD - Main 
+DEGREES - Main 
+EIGHT - Main 
+FIVE - Main 
+FORWARD - Main 
+FOUR - Main 
+LEFT - Main 
+METERS - Main 
+NINE - Main 
+NINETY - Main 
+ONE - Main 
+RIGHT - Main 
+SECONDS - Main 
+SEVEN - Main 
+SIX - Main 
+SIXTY - Main 
+TEN - Main 
+THIRTY - Main 
+THREE - Main 
+TURN - Main 
+TWO - Main 
+

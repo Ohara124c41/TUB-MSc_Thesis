@@ -1,0 +1,42 @@
+  n : 3
+  Input file : ./English/emma11.idngram.32bits     (binary format)
+  Output files :
+     ARPA format   : English/emma11.filtered.arpa
+  Vocabulary file : ./English/emma11.vocab
+  Cutoffs :
+     2-gram : 0     3-gram : 0     
+  Vocabulary type : Open - type 1
+  Minimum unigram count : 0
+  Zeroton fraction : 1
+  Counts will be stored in two bytes.
+  Count table size : 65535
+  Discounting method : Good-Turing
+     Discounting ranges :
+        1-gram : 1     2-gram : 7     3-gram : 7     
+  Memory allocation for tree structure : 
+     Allocate 100 MB of memory, shared equally between all n-gram tables.
+  Back-off weight storage : 
+     Back-off weights will be stored in four bytes.
+Reading vocabulary.
+read_wlist_into_siht: a list of 7101 words was read from "./English/emma11.vocab".
+read_wlist_into_array: a list of 7101 words was read from "./English/emma11.vocab".
+Allocated space for 3571428 2-grams.
+Allocated space for 8333333 3-grams.
+table_size 7102
+Allocated 57142848 bytes to table for 2-grams.
+Allocated (2+33333332) bytes to table for 3-grams.
+Processing id n-gram file.
+20,000 n-grams processed for each ".", 1,000,000 for each line.
+......
+Calculating discounted counts.
+Warning : 1-gram : Discounting range is 1; setting P(zeroton)=P(singleton).
+Discounted value : 1.00
+Unigrams's discount mass is 5.85088e-06 (n1/N = 0.0161132)
+1 zerotons, P(zeroton) = 5.85088e-06 P(singleton) = 5.85083e-06
+P(zeroton) was reduced to 0.0000058508 (1.000 of P(singleton))
+prob[UNK] = 5.85083e-06
+Incrementing contexts...
+Calculating back-off weights...
+Writing out language model...
+ARPA-style 3-gram will be written to English/emma11.filtered.arpa
+idngram2lm : Done.

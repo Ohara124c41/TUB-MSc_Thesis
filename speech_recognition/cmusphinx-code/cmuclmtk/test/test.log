@@ -1,0 +1,32 @@
+text2wfreq
+text2wfreq PASSED
+wfreq2vocab
+wfreq2vocab PASSED
+text2idngram BIN IDNGRAM
+text2idngram BIN IDNGRAM PASSED
+text2wngram WNGRAM
+text2wngram WNGRAM PASSED
+text2idngram TXT IDNGRAM
+text2idngram TXT IDNGRAM PASSED
+idngram2lm ARPA
+.......
+idngram2lm ARPA PASSED
+idngram2lm BIN
+.......
+idngram2lm BIN PASSED
+of binlm2arpa
+binlm2arpa  PASSED
+of idngram2stats
+idngram2stats PASSED
+of evallm STATS
+evallm STATS PASSED
+of evallm PERPLEXITY
+evallm PERPLEXITY PASSED
+of ngram2mgram TO 2-GRAM TXT
+ngram2mgram TXT TO 2-GRAM TXT PASSED
+of ngram2mgram TO 1-GRAM TXT
+ngram2mgram TXT TO 1-GRAM TXT PASSED
+of ngram2mgram TO 2-GRAM BIN
+ngram2mgram TXT TO 2-GRAM BIN PASSED
+of ngram2mgram TO 1-GRAM BIN
+ngram2mgram TXT TO 1-GRAM BIN PASSED

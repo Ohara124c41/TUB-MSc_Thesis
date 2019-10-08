@@ -1,0 +1,3 @@
+wfreq2vocab : Will generate a vocabulary containing the most
+              frequent 20000 words. Reading wfreq stream from stdin...
+wfreq2vocab : Done.
