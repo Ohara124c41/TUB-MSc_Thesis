@@ -35,7 +35,7 @@ roslaunch speech_cmd cmd.launch
 
 rosrun turtlesim turtlesim_node
 ```
-
+```
 cd speech_recognition
 git clone https://github.com/cmusphinx/sphinxbase
 
@@ -135,7 +135,7 @@ gst-launch -v -m audiotestsrc ! audioconvert ! audio/x-raw-int,channels=2,width=
 
 ```
 
-```
+
 
 ### Pocketsphinx Test
 ```
