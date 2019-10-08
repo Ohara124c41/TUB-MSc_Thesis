@@ -36,6 +36,107 @@ roslaunch speech_cmd cmd.launch
 rosrun turtlesim turtlesim_node
 ```
 
+cd speech_recognition
+git clone https://github.com/cmusphinx/sphinxbase
+
+cd sphinxbase
+./autogen.sh
+./configure
+make clean all
+make check
+sudo make install
+export LD_LIBRARY_PATH=/usr/local/lib
+
+
+git clone https://github.com/cmusphinx/pocketsphinx
+cd pocketsphinx/
+./autogen.sh
+./configure
+make clean all
+make check
+sudo make install
+
+git clone https://github.com/cmusphinx/sphinxtrain
+cd sphinxtrain/
+./autogen.sh
+./configure
+make clean all
+make check
+sudo make install
+
+svn checkout svn://svn.code.sf.net/p/cmusphinx/code/trunk cmusphinx-code
+cd cmusphinx-code/
+cd cmumlmtk/
+./autogen.sh
+./configure
+make clean all
+make check
+sudo make install
+
+
+sudo apt-get install ros-kinetic-ar-track-alvar-msgs
+cd catkin_ws/
+source devel/setup.bash
+roslaunch pocketsphinx speech_cmd.launch 
+
+roslaunch pocketsphinx kws.launch dict:=/home/ohara/catkin_ws/src/pocketsphinx/demo/voice_cmd.dic kws:=/home/ohara/catkin_ws/src/pocketsphinx/demo/voice_cmd.kwlist input:=/home/ohara/catkin_ws/src/pocketsphinx/demo/goforward.raw
+roslaunch turtlebot_gazebo turtlebot_world.launch
+
+
+sudo dpkg -i '/home/ohara/Downloads/pocketsphinx-utils_0.8.0+real-0ubuntu6_amd64.deb' 
+sudo dpkg -i '/home/ohara/Downloads/libpocketsphinx1_0.8-5_amd64.deb' 
+sudo dpkg -i '/home/ohara/Downloads/libsphinxbase1_0.8-6_amd64.deb' 
+sudo dpkg -i '/home/ohara/Downloads/libpocketsphinx1_0.8-5_amd64.deb' 
+sudo dpkg -i '/home/ohara/Downloads/pocketsphinx-utils_0.8.0+real-0ubuntu6_amd64.deb' 
+sudo apt-get install libsphinxbase1
+sudo apt-get -f install
+sudo apt-get install libpocketsphinx1
+sudo apt-get install pocketsphinx
+sudo dpkg -i '/home/ohara/Downloads/gstreamer0.10-pocketsphinx_0.8.0+real-0ubuntu6_amd64.deb' 
+sudo dpkg -i '/home/ohara/Downloads/gstreamer1.0-plugins-base_1.4.4-2+deb8u2_amd64.deb' 
+sudo pip install pyaudio
+sudo pip install pocketsphinx
+sudo apt-get install pyttsx
+pip install pyttsx
+sudo apt-get install libpulse-dev
+sudo apt-get install bison
+
+mkdir pocketsphinx
+cd pocketsphinx
+wget http://sourceforge.net/projects/cmusphinx/files/sphinxbase/0.8/sphinxbase-0.8.tar.gz
+wget http://www.repository.voxforge1.org/downloads/de/Trunk/Lexicon/Lexicon.tgz
+wget http://www.repository.voxforge1.org/downloads/de/Trunk/AcousticModels/Sphinx_AcousticModel.tgz
+wget http://sourceforge.net/projects/cmusphinx/files/pocketsphinx/0.8/pocketsphinx-0.8.tar.gz
+tar xvf pocketsphinx-0.8.tar.gz
+tar xvf sphinxbase-0.8.tar.gz
+tar xvf Lexicon.tgz
+tar xvf Sphinx_AcousticModel.tgz
+
+cd sphinxbase-0.8/
+make clean
+make
+catkin_make
+sudo make install
+sudo catkin_make install
+
+cd pocketsphinx-0.8/
+catkin_make clean
+catkin_make
+catkin_make install
+
+cd catkin_ws/
+catkin_make install
+
+rosrun pocketsphinx voice_control_example.py
+
+
+
+gst-launch -v -m audiotestsrc ! audioconvert ! audio/x-raw-int,channels=2,width=8,depth=8 ! level ! fakesink silent=TRUE
+
+```
+
+```
+
 ### Pocketsphinx Test
 ```
 cd speech_recognition/
