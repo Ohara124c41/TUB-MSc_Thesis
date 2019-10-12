@@ -1,0 +1,38 @@
+AFFIRMATIVE - Main 
+BACKWARD - Main 
+CONFIRM - Main 
+COPY - Main 
+DEGREE - Main 
+DEGREES - Main 
+EIGHT - Main 
+FIFE - Main 
+FIVE - Main 
+FORTY - Main [base] 
+FIVE - Main [base] 
+FORWARD - Main 
+FOUR - Main 
+LtoS pronounce: verbosity is 1
+FOWER - By LtoS rules
+LEFT - Main 
+MARK - Main 
+METER - Main 
+METERS - Main 
+NEGATIVE - Main 
+NINE - Main 
+NINER - Main 
+NINETY - Main 
+ONE - Main 
+RIGHT - Main 
+ROGER - Main 
+ROTATE - Main 
+SECOND - Main 
+SECONDS - Main 
+SEVEN - Main 
+SIX - Main 
+SIXTY - Main 
+TEN - Main 
+THIRTY - Main 
+THREE - Main 
+TREE - Main 
+TWO - Main 
+
