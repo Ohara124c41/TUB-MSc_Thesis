@@ -96,6 +96,11 @@ sudo dpkg -i '/home/ohara/Downloads/gstreamer0.10-pocketsphinx_0.8.0+real-0ubunt
 sudo dpkg -i '/home/ohara/Downloads/gstreamer1.0-plugins-base_1.4.4-2+deb8u2_amd64.deb' 
 sudo pip install pyaudio
 sudo pip install pocketsphinx
+sudo apt-get install python-gst-1.0
+sudo apt install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg libav-tools
+sudo apt install python-gst0.10
+sudo apt-get install gstreamer0.10-gconf
+
 sudo apt-get install pyttsx
 pip install pyttsx
 sudo apt-get install libpulse-dev
