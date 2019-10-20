@@ -1,0 +1,58 @@
+
+%############################################################################
+%########################### DO NOT touch this, unless you need to ##########
+%############################################################################
+\makeatletter
+\thispagestyle{empty}
+%head line logo + tub + logo
+\begin{tabular}{lcc}
+\includegraphics[width=0.15\textwidth]{template/TUBerlin_Logo_rot_hell}& \hspace{1.1cm} Technische Universit{\"a}t Berlin& \hspace{1.2cm} \includegraphics[width=0.15\textwidth]{template/aot_logo}\\
+\end{tabular}
+%draw a line
+\rule{\textwidth}{0.4pt}
+%aub: remove this on final submission
+\begin{center}
+DOCUMENT BUILD DATE: \today\\%
+%add your status here, e.g. First Draft for Supervizor etc.
+DOCUMENT STATUS: Beta
+\end{center}
+
+%vertical space
+\vspace{2.5cm}
+\begin{center}
+%replace this
+  \textbf{\LARGE \@title}
+\end{center}
+\vspace{2cm}
+
+\begin{center}
+  \textbf{\insertsubject} \\
+  am Fachgebiet Agententechnologien in betrieblichen Anwendungen und der Telekommunikation (AOT)\\
+  Prof.\ Dr.-Ing.\ habil.\ Sahin Albayrak \\
+  Fakultät IV Elektrotechnik und Informatik \\
+  Technische Universität Berlin \\[0.5cm]
+  vorgelegt von \\
+  \textbf{\@author}
+\end{center}
+
+\vspace{1cm}
+
+
+\begin{center}
+\begin{tabular}{ll}
+Betreuer: & \trbetreuerA, \\ 
+Gutachter:& \trguta\\
+& \trgutb\\
+\end{tabular}
+\end{center}
+
+\vfill
+
+\begin{tabular}{l}
+\@author \\
+Matrikelnummer:  \trmatrikelnummer \\
+\end{tabular}
+
+\rule{\textwidth}{0.4pt}
+\makeatother
+\clearpage

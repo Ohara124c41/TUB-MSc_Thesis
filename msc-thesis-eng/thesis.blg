@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2018/W32TeX)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: thesis.aux
+The style file: apalike.bst
+Database file #1: input/mybib.bib
+Warning--empty booktitle in keyword
+Warning--empty booktitle in Connectionist
+Warning--empty year in latexcookbook2007
+Warning--empty booktitle in Multimodal
+Warning--empty booktitle in Song2015EndtoEndDN
+You've used 35 entries,
+            1935 wiz_defined-function locations,
+            660 strings with 8070 characters,
+and the built_in function-call counts, 11328 in all, are:
+= -- 1123
+> -- 383
+< -- 32
++ -- 122
+- -- 120
+* -- 825
+:= -- 2035
+add.period$ -- 90
+call.type$ -- 35
+change.case$ -- 233
+chr.to.int$ -- 33
+cite$ -- 40
+duplicate$ -- 484
+empty$ -- 800
+format.name$ -- 165
+if$ -- 2222
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 21
+newline$ -- 162
+num.names$ -- 105
+pop$ -- 205
+preamble$ -- 1
+purify$ -- 235
+quote$ -- 0
+skip$ -- 390
+stack$ -- 0
+substring$ -- 700
+swap$ -- 56
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 206
+warning$ -- 5
+while$ -- 88
+width$ -- 0
+write$ -- 404
+(There were 5 warnings)

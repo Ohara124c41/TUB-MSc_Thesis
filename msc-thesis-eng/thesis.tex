@@ -1,0 +1,157 @@
+\documentclass[12pt,a4paper]{report}
+
+\makeatletter
+
+\def\author#1{\gdef\insertauthor{#1}\gdef\@author{#1}\hypersetup{pdfauthor={#1}}}
+\def\title#1{\gdef\inserttitle{#1}\gdef\@title{#1}\hypersetup{pdftitle={#1}}}
+\def\keywords#1{\gdef\insertkeywords{#1}\hypersetup{pdfkeywords={#1}}}
+\def\subject#1{\gdef\insertsubject{#1}\hypersetup{pdfsubject={#1}}}
+
+\makeatother
+
+\RequirePackage[final,breaklinks,bookmarks]{hyperref}
+
+\hypersetup{%
+    colorlinks=true,
+    allcolors=black,
+    pdfcreator  = {\LaTeX\ with package \flqq hyperref\frqq},
+    pdfproducer = {pdfeTeX-0.\the\pdftexversion\pdftexrevision}
+}
+
+
+%############################################################################
+%########################### Change This ####################################
+%############################################################################
+%replace with German "Bachelor Thesis", "Master Thesis" or "Diplomarbeit" or
+%replace with English "Bachelor's Thesis", "Master's Thesis"  
+\subject{Master Thesis}
+%put your title here
+\title{Optimizing Agent Behavior and Minimizing User Cognitive Load for Mixed Human-Robot Teams}
+%your name
+\author{Christopher O'Hara}
+% your matrikelnummer
+\newcommand{\trmatrikelnummer}{406037}
+%supervisor
+\newcommand{\trbetreuerA}{Christopher-Eyk Hrabia}
+%\newcommand{\trbetreuerA}{Dipl.-Inf. Christian Scheel}
+%reviewer 1
+\newcommand{\trguta}{Prof. Dr.-Ing. habil. Sahin Albayrak}
+%reviewer two
+\newcommand{\trgutb}{Prof. Dr. Odej Kao}
+\date{\today}
+%put some meaningful keywords, these are only examples
+\keywords{Multi-Agent Systems, Machine Learning, Human-Robot Interaction}
+
+%###################################################################################
+%###################### Document Defintions ########################################
+%###################################################################################
+%aubrey: no real need to change these
+%how to handle spaces
+\sloppy
+\makeindex
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, marvosym} % Mathematik
+%\usepackage{harvard} %for harvard style citation, keep this position before url package
+\usepackage{times, url, geometry, amssymb, booktabs}
+
+
+
+%\usepackage[pdfusetitle]{hyperref}
+\usepackage[pdftex]{graphicx} %pdf figures
+%\usepackage[pdftex,
+%            pdfauthor={Your Name},
+%            pdftitle={The Title},
+%            pdfsubject={The Subject},
+%            pdfkeywords={Some Keywords},
+%            pdfproducer={Latex with hyperref, or other system},
+%            pdfcreator={pdflatex, or other tool}]{hyperref}
+\usepackage{subfig} %multi-figures
+\usepackage{listings} %code listings
+\usepackage{multirow} %for multi-row tables
+\usepackage{color} %needed for listings
+
+
+%depth of section
+\setcounter{secnumdepth}{4}
+%depth of TOC
+\setcounter{tocdepth}{3}
+%directory for graphics
+\graphicspath{{gfx/}}
+
+%setting for listing
+\lstset{
+	extendedchars=true,
+	basicstyle=\scriptsize\ttfamily,
+	%basicstyle=\tiny\ttfamily,
+	tabsize=2,
+	keywordstyle=\textbf,
+	commentstyle=\color{grau},
+	stringstyle=\textit,
+	numbers=left,
+	numberstyle=\tiny,
+	% für schönen Zeilenumbruch
+	breakautoindent  = true,
+	breakindent      = 2em,
+	breaklines       = true,
+	postbreak        = ,
+	%prebreak         = \raisebox{-.8ex}[0ex][0ex]{\ensuremath{\lrcorner}},
+	prebreak         = \raisebox{-.8ex}[0ex][0ex]{\Righttorque},
+}
+
+%Table of Content TOC settings
+\setcounter{tocdepth}{3}
+%This is needed for entering URLs for harvard citation style
+%\renewcommand{\harvardurl}{URL: \url}
+
+
+%###################################################################################
+%########################### Thesis content ########################################
+%###################################################################################
+\begin{document}
+%__________________________Start_of_Thesis______________________________________________
+%Roman numeral numbering for initial section of thesis
+\pagenumbering{roman}
+%title page specification, deployed as seperate file the input folder
+\input{input/00a_title_page}
+%abstract plus acknowledgement and statement
+\input{input/00b_abstract_ack}
+%TOC
+\tableofcontents
+%add list of figures to TOC
+\cleardoublepage
+\addcontentsline{toc}{chapter}{List of Figures}
+\newpage
+\listoffigures
+%add list of tables to TOC
+\cleardoublepage
+\addcontentsline{toc}{chapter}{List of Tables}
+\newpage
+\listoftables
+
+%__________________________Main_Content______________________________________________
+\newpage
+%from now on, numbering should be arabic
+\pagenumbering{arabic}
+\input{input/01_introduction}
+\input{input/02_background}
+\input{input/03_main_part_1}
+\input{input/04_main_part_2}
+\input{input/05_evaluation}
+\input{input/06_conclusion}
+
+%__________________________End_of_Thesis______________________________________________
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliography}
+%harvard citations style, please uncomment harvard package in the usepackage area
+%\bibliographystyle{agsm}
+%remove the following line when using harvard style citation
+%\bibliographystyle{plainnat}
+\bibliographystyle{apalike}
+%specify bibtex file here
+\bibliography{input/mybib}
+%add appendix to TOC
+\addcontentsline{toc}{chapter}{Appendices}
+\input{input/07_appendix}
+
+\end{document}

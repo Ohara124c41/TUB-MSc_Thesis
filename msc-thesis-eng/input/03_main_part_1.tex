@@ -1,0 +1,90 @@
+\chapter{My First Main Part}
+\label{mainone}
+%DELETEME: In this chapter you start addressing your actual problem. Therefore, it makes often sense to make a detailed problem analysis first (if not done in introduction). You should be sure about what to do and how. As writtin in the background part, it might also make sense to include complex background information or papers you are basing on in this analysis. If you are solving a software problem, you should follow the state of the art of software development which basically includes: problem analysis, design, implementation, testing, and deployment. Maintenance is often also described but I believe this will not be required for most theses. Code should be placed in the appendix unless it is solving an essential aspect of your work.
+
+\section{Objectives}
+
+Note: each RQ will be approached and completed with the mindset that this is not a final, shippable product, i.e., this is a prototype/mock-up. In reality, the foundation and framework need to be available in the form of a robust 'proof-of-concept' that can be adaptable for specific needs of the stakeholders that follow (e.g., the SEK will likely want to change specific details as well as future researchers within the DAI-Labor). 
+\smallskip
+
+Each research question will be broken down into work packages. Each implementation will be given clear objectives and criteria for evaluation. Some work packages will have a slight overlap related to tuning, implementation, and iterative design. The end results are intended for the interoperability between distributed systems, applicable to many projects. 
+\smallskip
+
+\subsection{RQ1: Human-Robot Communication}
+\noindent RQ1: How should the drone send confirmations to the operator to minimize ambiguity, human errors, and temporal descrepancies?
+\smallskip
+
+After viewing the field demonstration and discussion with the SEK, it is evident controlling the drone via voice commands is preferred. The SEK operatives primarily utilize speech (through headsets) for communication (local and global). While gestures, positioning, and other non-verbal communication methods are employed (i.e., patting and tapping) this are based on proximity (locality) and the situation. Furthermore, as local communication is based on quick confirmations, it does not appear to impact the overall goal. As such, the drone will still have its core mission criteria that are independent of these non-verbal interactions. 
+\smallskip
+
+Once the drone has received its orders, it should begin to complete its tasks. However, it is currently not clear how the drone will communicate with the operator that it has correctly interpreted the task. Consider the following task given to a drone: 'go forward to an open doorway, enter the room, scan the area, proceed into any additional room on the right side.' It is possible that the drone correctly begins its task and enters the first room but did not properly interpret the sequence afterward. If the drone is able to confirm the sequence with the operator, proper navigation can be ensured (at least on the command level). Furthermore, it would be ideal to give a drone a sequence of commands with a 'wait' feature, i.e., \texttt{sleep()}. The operator could properly confirm the sequence, make any necessary changes, and then send an 'engage' command. The drone should also be able to send confirmations once each individual command has been completed (like a check-list) if desired. 
+\smallskip
+
+In designing \textit{Natural User Interfaces} (NUIs), research has shown that gesture-based interfaces are less natural for communication. Due to the high criticality of missions and adherence to safety, any additional ambiguity related to NUIs would impact mission performance. Audial and visual interfaces can decrease ambiguity if properly designed. The first logical step is to determine which of these two interfaces are preferred prior to detailed implementation. Therefore, a user study needs to be conducted evaluating preference, subjective load, and qualitative factors. 
+
+
+
+\subsection{RQ2: Operator Cognitive Load}
+\noindent RQ2: What are the negative effects (response time delay, accuracy, situational awareness) on the operator's cognitive load during operation?
+\smallskip
+
+Automatic Speech Recognition (ASR) models are not perfect. The middleware might not properly understand the commands of the user which greatly impacts the mission's objectives due to a loss of time for correction and operator frustration/distraction. A user study will be needed in which the user completes some simple tasks simultaneously as validating the drone's confirmation. The concept here is that a drone could report to the operator incorrect information which could lead to mission failure and/or compromise the operator/plan. For quantitative evaluation, several tests from the cognitive science field have been employed to measure \textit{Working Memory} (WM) capacity (is the operator able to properly remember the sent commands when under pressure?) and \textit{Response Time} during events requiring a high cognitive load and split attention. The results and analysis will infer user's situational awareness and confirmation accuracy. The user could be asked to give commands to the drone and listen for the confirmation while taking the test. Quantitative results would be compared between a baseline (test only), test while receiving audial confirmations (headset), and tests while receiving visual confirmation (AR).
+\smallskip
+
+\section{Proposed Solution}
+
+Based on the previous sections, the goal is to enable a drone to accept user commands, accurately follow the commands, and send a confirmation to the user (for review). Prior to selecting the form in which the drone should send confirmations, qualitative (user preference) and quantitative (reaction times, accuracy of memory) need to be derived from user study results. The simulation environment will be based on the previous work at DAI-Labor (\cite{hrabia1}). A custom library/dictionary will be created for ASR and validated in ROS. ROS will then communicate these commands to the drone (SST) and the drone's behavior should follow correctly. It is planned to create a UI for visual representations of the confirmation (a text-based or icon-based visualization) depending on the Mixed-Reality device (i.e., Unity 3D for HoloLens). 
+
+
+\subsection{Milestone I}
+%RQ1 will have several distinct phases. First, a library/dictionary for \textit{Automated Speech Recognition} (ASR) must be created/utilized. Secondly, the library must be properly processed and published in ROS. Third, interfacing and validation in real-time (or pre-recorded .WAV files) will be completed on a drone in the simulator. Then, if access is available, demonstrating the simulation results on a live drone (much like the previous InLaSeD work \cite{Montebaur}). 
+
+RQ1 and RQ2 will be approached simultaneously. The first aspect is to implement a library/dictionary for \textit{Automated Speech Recognition} (ASR) that can allow for commands to be sent to a drone (either simulated or actually sent to a drone via ROS). Next, a Speech-to-Text (STT) library could be designed for machine translation into ROS (ideal of verification of commands). In the physical implementation of a drone, the STT commands would be sent to the robot. For cognitive evaluation alone, it might be better to focus on a Text-to-Speech (TTS) model. Utilizing a terminal, TTS commands could be manually typed and sent to the user's device to evaluate their hit/miss rate for confirming the drone's response. This would mitigate any errors that would be caused by utilizing ASR (control variable). TTS commands would be sent to the user's headset during a cognitive test. For an MR solution, STT would allow for commands to be translated and sent to the device's UI in the form of words or icons that represent words (i.e., a right arrow for `right'). 
+\smallskip
+
+It is intended to use the NASA-TXL (or similar) for measuring perceived cognitive load while asking users to make a preference for receiving audial or visual confirmations. For quantitative tasks, it is intended to use the Inquisit Laboratory program with the PVT test. Both tests are regularly used by NASA to evaluate astronauts during space missions, furthermore, NASA quotes: "The PVT Self Test has wide application to any group that must operate remotely at high levels of alertness, such as first responders, Homeland Security personnel, flight crews, special military operations, police, and firefighters (\cite{nasa1})." This makes the test ideal in evaluating subjects for high cognitive load tasks. The current plan is to evaluate three use cases for the test: one without any drone commands (baseline), one with audial drone confirmations, and one with visual drone confirmations. The goal is to have the users complete the tasks of the PVT while measuring their response times and accuracy (automatic with Inquisit Laboratory (\cite{Millisecond})) and documenting their accuracy for confirming correct drone command sequences (hit). 
+
+\subsection{Milestone II}
+After qualitative and quantitative results have been analyzed and weighed, a virtual implementation can be thoroughly constructed in ROS (with an RHBP model). The task will be to ensure that drone behavior matches the input commands and the output is properly sent to the user's device. Additionally, the drone will operate within the selected range/bounds based on the operational criteria based on SEK operatives, as well as an interoperable model that can be used for general projects (a distributed model). Finally, once the behavior has been validated and verified in ROS, it is intended to provide a live demonstration with the drone responding to the user commands, following intended behavior, and reporting back to the user's device. 
+\smallskip
+
+%\subsection{Milestone II}
+%RQ3 will also require user testing. The goal will be to operate a drone at varying distances, heights, and relative angles from the user. For this, a custom test will be made in which the users describe their preferences. In the ranges that have the most overlap, a model can be created in the RHBP. 
+%\smallskip
+
+%\subsection{Milestone III}
+%RQ4 will require careful implementations for drone behavior. The goal is to take the results of RQ3 and have a drone operate within the selected range/bounds along with additional operational criteria based on SEK operatives. Ideally, an artificial human agent will be created, along with an environment that has realistic features (narrow hallways, staircases, objects, etc.). The goal is to have the drone perform as a useful teammate that does not impede the mission plan, safety, or cognitive load of the SEK operative. Based on the results here, it can be decided on \textit{how} to add sensors to the drone to properly understand spatial relations to the operator. 
+%\smallskip
+
+\subsection{Project Management}
+Typical project management aspects will also follow. A GitLab account will be created via TU Berlin and Scrum-style weekly meetings will be conducted with Christopher-Eyk Hrabia. This will help to ensure timeliness and proper communication. Deviations are likely to happen (i.e., switching from one framework to another due to compatibility or performance issues) but this will be mitigated as much as possible with proper literature review and stand-alone implementations.
+
+
+\section{Work Packages}
+The project will be broken down into several work packages. Figure \ref{gannt} gives the timeline for task completion. This section proposes some of the current approaches and architectures.
+
+
+\subsection{Research}
+
+Research has been conducted, thus far, by first evaluating the goal of the project. This has made the approach easier by evaluating how other researchers have approached this issue (from classical methods to state-of-the-art). Next, it was critical to ensure the alignment of the needs of the SEK. This pruned a lot of approaches and methods. However, more iterations within the research cycle need to continue in order to meet the high-performance metrics while maintaining feasibility. 
+
+
+\subsection{Implementation Process}
+
+
+It is planned to make a library based on the commands that SEK operatives would use during operations. Such words might include 'forward', 'right', and 'stop'. Furthermore, temporal and spatial commands would be ideal ('forward for five seconds', 'left two meters'). However, spatial commands need a proper translation from the user's perspective to the drone's perspective. If possible (and in existence) it would be good to allow for a command that switches to autonomous behavior ('exploration/scan mode'). This will depend on what the drone is already capable of (or added as part of this project by pruning another research question). Each utterance (word) will need to be recorded at least 200 times. This will help provide enough data for a DL implementation with TensorFlow (see below). If this is insufficient, more recordings will be created. For HMM models, it is not clear how much training data is needed currently. The resulting model can be tested (if required) with users but it might be better to treat the proposed user testing with a `simulated' environment (i.e., manually sending congruent/incongruent command sequences via TTS or text-based inputs). 
+\smallskip
+
+
+Until now, a large amount of time was spent to ensure that the project was feasible. ROS is intended to be the core middleware for program communication. Many considerations were given based on the (real) environment that the drone would operate in. For example, Cloud computing for ASR allows for the highest accuracy using Google's STT framework (\cite{Google}). However, Cloud interfaces might not be plausible and soldiers might not be in an environment that can directly interact with the Cloud.
+\smallskip
+
+Currently, the plan is to create an independent library and either utilize DL via TensorFlow (\cite{TensorFlow}) based on Small-footprint Keyword Spotting \\ (\cite{keyword}) or use a HMM model with PocketSphinx and a custom dictionary. TensorFlow can easily integrate with ROS and is relatively easy to adjust. Furthermore, the TensorFlow implementation allows for continuous speech input and the trained models can be exported to Android (good for in-person demonstrations). Finally, results can be visualized using TensorBoard, an aesthetic and informative tool. In terms of an HMM approach, many researchers have used CMU-Sphinx (PocketSphinx) for ASR. Achieving the highest accuracy possible is desired, so the final implementation may require the DL/TensorFlow approach as HMM can have variable accuracy as the end result (which is undesirable for safety-critical missions) (\cite{Amazigh}), (\cite{Covariance}). 
+\smallskip
+
+In the event there are issues with the speech recognition in ROS, it can be bypassed and completed in Unity 3D (worst-case scenario) (\cite{Unity}). Unity can act as middleware, though it often behaves slower. This would only be in the case of a demonstration that was also utilizing the HoloLens (as is done by Siemens (\cite{Siemens})). However, a HoloLens might not be available and another device (which will likely be lighter and better for cognitive load) will need to be used. If it does not have an interface with Unity, another solution will be employed. Another option is to directly employ the Google Cloud Speech API in ROS. Again, based on the assumptions I have proposed, this is not ideal and would be left only for the sake of demonstration (i.e., for the SEK with a very constrained deadline) (\cite{Google2}). 
+\smallskip
+
+The UI will be created using Unity 3D (HoloLens) or similar software (third-party AR/MR device). This allows for some visualizations and initial feedback even without having a device on hand. In fact, it could be that this lays the framework for implementation (as a proof-of-concept) in the event that a HoloLens is unobtainable.
+
+

@@ -1,0 +1,179 @@
+\begin{thebibliography}{}
+
+\bibitem[Broadbent, 1958]{Broadbent1958-BROPAC-3}
+Broadbent, D. (1958).
+\newblock {\em Perception and Communication}.
+\newblock Pergamon Press.
+
+\bibitem[Chandler and Sweller, 1991]{Chandler}
+Chandler, P. and Sweller, J. (1991).
+\newblock {Cognitive Load Theory and the Format of Instruction}.
+\newblock {\em Faculty of Education - Papers}, 8.
+
+\bibitem[Chen et~al., 2014]{keyword}
+Chen, G., Parada, C., and Heigold, G.~. (2014).
+\newblock Small-footprint keyword spotting using deep neural networks.
+\newblock pages 4087--4091.
+
+\bibitem[Cho and Proctor, 2003]{Cho2003}
+Cho, Y.~S. and Proctor, R.~W. (2003).
+\newblock {Stimulus and Response Representations Underlying Orthogonal
+  Stimulus-Response Compatibility Effects}.
+\newblock {\em Psychonomic Bulletin {\&} Review}, 10(1):45--73.
+
+\bibitem[CMU-Sphinx, 2019]{CMU-Sphinx}
+CMU-Sphinx (2019).
+\newblock {ROS-Pocketsphinx}.
+
+\bibitem[Dinges, 2019a]{nasa2}
+Dinges, D.~F. (2019a).
+\newblock {Experiment Summary Reaction Self Test}.
+
+\bibitem[Dinges, 2019b]{nasa1}
+Dinges, D.~F. (2019b).
+\newblock {Psychomotor Vigilance Self Test on ISS}.
+
+\bibitem[Dyson, 2008]{dysoncognitive}
+Dyson, P. (2008).
+\newblock {\em {Cognitive Psychology}}.
+\newblock British medical bulletin. Academic Press.
+
+\bibitem[Endsley, 1995]{Endsley}
+Endsley, M. (1995).
+\newblock {Toward a Theory of Situation Awareness in Dynamic Systems}.
+\newblock {\em Human Factors: The Journal of the Human Factors and Ergonomics
+  Society}, 37:32--64.
+
+\bibitem[Engle, 2002]{Engle}
+Engle, R.~W. (2002).
+\newblock {Working Memory Capacity as Executive Attention}.
+\newblock {\em Current Directions in Psychological Science}, 11(1):19--23.
+
+\bibitem[EU, 2016]{eurostat}
+EU (2016).
+\newblock {Quality} of {Life} {Indicators} - {Economic} and {Physical}
+  {Safety}.
+
+\bibitem[Google, 2019a]{Google2}
+Google (2019a).
+\newblock Google cloud speech for ros.
+
+\bibitem[Google, 2019b]{Google}
+Google (2019b).
+\newblock {Google Cloud Speech-to-Text API}.
+
+\bibitem[Graves et~al., 2006]{Connectionist}
+Graves, A., Fernández, S., Gomez, F., and Schmidhuber, J. (2006).
+\newblock Connectionist temporal classification: Labelling unsegmented sequence
+  data with recurrent neural 'networks.
+\newblock volume 2006, pages 369--376.
+
+\bibitem[Hrabia et~al., 2017]{hrabia1}
+Hrabia, C., Wypler, S., and Albayrak, S. (2017).
+\newblock {Towards Goal-Driven Behaviour Control of Multi-Robot Systems}.
+\newblock In {\em 2017 3rd International Conference on Control, Automation and
+  Robotics (ICCAR)}, pages 166--173.
+
+\bibitem[Maas, 2017]{Stanford}
+Maas, A. (2017).
+\newblock {Spoken Language Processing-ASR: HMMs, Forward, Viterbi}.
+
+\bibitem[{Markus.Porto - Uni Giessen}, ]{latexcookbook2007}
+{Markus.Porto - Uni Giessen}.
+\newblock Kochbuch für latex.
+\newblock \url{http://www.uni-giessen.de/hrz/tex/cookbook/cookbook.html}
+  (3.~April 2007).
+
+\bibitem[Millisecond, 2019]{Millisecond}
+Millisecond (2019).
+\newblock {Inquisit Lab}.
+
+\bibitem[Moll, 2017]{BradSEK}
+Moll, T. (2017).
+\newblock {SEK} {Brandenburg} {Erhielt} {Achleitner} {HMV-Survivor}.
+
+\bibitem[Nieuwenstein et~al., 2009]{Nieuwenstein}
+Nieuwenstein, M.~R., Potter, M.~C., and Theeuwes, J. (2009).
+\newblock {Unmasking the Attentional Blink}.
+\newblock {\em Journal of Experimental Psychology, Human Perception and
+  Performance}, 35(1):159–169.
+
+\bibitem[Oberheide et~al., 2008]{oberheide:2008:cloudav}
+Oberheide, J., Cooke, E., and Jahanian, F. (2008).
+\newblock Cloudav: N-version antivirus in the network cloud.
+\newblock In {\em Proceedings of the 17th USENIX Security Symposium
+  (Security'08)}, San Jose, CA.
+
+\bibitem[Plonkowski, 2018]{Covariance}
+Plonkowski, M. (2018).
+\newblock Using full covariance matrix for cmu sphinx-iii speech recognition
+  system.
+\newblock {\em PRZEGLAD ELEKTROTECHNICZNY}, 1:104--106.
+
+\bibitem[Receveur and Fingscheidt, 2014]{Multimodal}
+Receveur, S. and Fingscheidt, T. (2014).
+\newblock On likelihood histogram equalization for multimodal automatic speech
+  recognition.
+
+\bibitem[Rogoway, 2018]{USMC1}
+Rogoway, T. (2018).
+\newblock {Marine Corps Considers Deploying Small Drones at Squad Level}.
+
+\bibitem[Siemens, 2019]{Siemens}
+Siemens (2019).
+\newblock Siemens: Ros sharp for unity.
+
+\bibitem[Sommer et~al., 2001]{Sommer2001MultipleBI}
+Sommer, W., Leuthold, H., and Schubert, T. (2001).
+\newblock {Multiple Bottlenecks in Information Processing? An
+  Electrophysiological Examination}.
+\newblock {\em Psychonomic bulletin \& review}, 8 1:81--8.
+
+\bibitem[Song, 2015]{Song2015EndtoEndDN}
+Song, W. (2015).
+\newblock End-to-end deep neural network for automatic speech recognition.
+\newblock Stanford University.
+
+\bibitem[Telmem and Ghanou, 2018]{Amazigh}
+Telmem, M. and Ghanou, Y. (2018).
+\newblock Estimation of the optimal hmm parameters for amazigh speech
+  recognition system using cmu-sphinx.
+\newblock {\em Procedia Computer Science | Proceedings of the First
+  International Conference on Intelligent Computing in Data Sciences},
+  127:92--101.
+
+\bibitem[TensorFlow, 2019]{TensorFlow}
+TensorFlow (2019).
+\newblock Tensorflow: Audio recognition.
+
+\bibitem[Torta et~al., 2013]{cuijpers}
+Torta, E., Cuijpers, R., and Juola, J. (2013).
+\newblock {Design of a Parametric Model of Personal Space for Robotic Social
+  Navigation}.
+\newblock {\em International Journal of Social Robotics}, 5(3):357--365.
+
+\bibitem[Traumberuf, 2019]{SEK1}
+Traumberuf (2019).
+\newblock {Berufsbild-Polizist} {Spezialeinsatzkommando}.
+
+\bibitem[Turner and Engle, 1989]{ospan2}
+Turner, M.~L. and Engle, R.~W. (1989).
+\newblock {Is Working Memory Capacity Task Dependent?}
+\newblock {\em Journal of Memory and Language}, 28.
+
+\bibitem[Unity, 2019]{Unity}
+Unity (2019).
+\newblock Voice input in unity.
+
+\bibitem[Wang et~al., 2016]{Wang2016CNNRNNAU}
+Wang, J., Yang, Y., Mao, J., Huang, Z., Huang, C., and Xu., W. (2016).
+\newblock {CNN-RNN}: {A} {Unified} {Framework} for {Multi-labe}l {Image}
+  {Classification}.
+\newblock {\em 2016 IEEE Conference on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 2285--2294.
+
+\bibitem[Ward, 2017]{CMU1}
+Ward, W. (2017).
+\newblock {Hidden} {Markov} {Models} in {Speech} {Recognition}.
+
+\end{thebibliography}
