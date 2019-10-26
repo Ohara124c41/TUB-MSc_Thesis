@@ -2,7 +2,7 @@
 Optimizing Agent Behavior and Mitigating User Cognitive Load for Mixed Human-Robot Teams.
 
 # WORK-IN-PROGRESS
-This README will be complete in December 2019. The current version has been used to setup the environment on four machines:
+This README will be complete in December 2019. The current Windows information is not provided (rather intuitive but will still be added at a later time). The current version has been used to setup the virtual environment (ROS, etc.) on four machines:
 
 
 Assuming this project is cloned and utilizing the file architecture:
@@ -141,9 +141,8 @@ Terminal 4:
 rosrun pocketsphinx voice_control_example.py
 ````
 
-### Speech with Turtlebot and confirm (WIP)
+### Speech with Turtlebot and confirm 
 
-Again, in separate, sourced terminals:
 ```
 roscore
 
@@ -153,3 +152,5 @@ roslaunch speech_cmd cmd.launch
 
 rosrun turtlesim turtlesim_node
 ```
+
+
