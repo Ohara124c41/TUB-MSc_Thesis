@@ -1,0 +1,31 @@
+ACTIVATE - Main 
+AFFIRMATIVE - Main 
+BACKWARD - Main 
+CONFIRM - Main 
+DEGREES - Main 
+EIGHT - Main 
+FIVE - Main 
+FORTY - Main [base] 
+FIVE - Main [base] 
+FORWARD - Main 
+FOUR - Main 
+INITIALIZE - Main 
+LEFT - Main 
+METERS - Main 
+NEGATIVE - Main 
+NINE - Main 
+NINETY - Main 
+ONE - Main 
+PIVOT - Main 
+RIGHT - Main 
+ROTATE - Main 
+SECONDS - Main 
+SEVEN - Main 
+SHUTDOWN - Main 
+SIX - Main 
+SIXTY - Main 
+TEN - Main 
+THIRTY - Main 
+THREE - Main 
+TWO - Main 
+

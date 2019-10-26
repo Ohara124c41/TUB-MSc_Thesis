@@ -5,6 +5,7 @@
 <s> TURN </s>
 <s> DEGREES </s>
 <s> METERS </s>
+<s> METER </s>
 <s> ONE </s>
 <s> TWO </s>
 <s> THREE </s>
@@ -19,6 +20,8 @@
 <s> SIXTY </s>
 <s> NINETY </s>
 <s> SECONDS </s>
+<s> CONFIRM </s>
+<s> REPORT </s>
 <s> <s> FORWARD ONE SECONDS </s> </s>
 <s> <s> FORWARD TWO SECONDS </s> </s>
 <s> <s> FORWARD THREE SECONDS </s> </s>
@@ -39,7 +42,7 @@
 <s> <s> BACKWARD EIGHT SECONDS </s> </s>
 <s> <s> BACKWARD NINE SECONDS </s> </s>
 <s> <s> BACKWARD TEN SECONDS </s> </s>
-<s> <s> FORWARD ONE METERS </s> </s>
+<s> <s> FORWARD ONE METER </s> </s>
 <s> <s> FORWARD TWO METERS </s> </s>
 <s> <s> FORWARD THREE METERS </s> </s>
 <s> <s> FORWARD FOUR METERS </s> </s>
@@ -49,7 +52,7 @@
 <s> <s> FORWARD EIGHT METERS </s> </s>
 <s> <s> FORWARD NINE METERS </s> </s>
 <s> <s> FORWARD TEN METERS </s> </s>
-<s> <s> BACKWARD ONE METERS </s> </s>
+<s> <s> BACKWARD ONE METER </s> </s>
 <s> <s> BACKWARD TWO METERS </s> </s>
 <s> <s> BACKWARD THREE METERS </s> </s>
 <s> <s> BACKWARD FOUR METERS </s> </s>

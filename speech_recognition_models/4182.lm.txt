@@ -1,0 +1,129 @@
+Language model created by QuickLM on Tue Oct 22 19:01:13 EDT 2019
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 26 sentences and 28 words
+
+\data\
+ngram 1=28
+ngram 2=52
+ngram 3=26
+
+\1-grams:
+-0.7782 </s> -0.3010
+-0.7782 <s> -0.2218
+-2.1931 ACTIVATE -0.2218
+-2.1931 AFFIRMATIVE -0.2218
+-2.1931 BACKWARD -0.2218
+-2.1931 CONFIRM -0.2218
+-2.1931 DEGREES -0.2218
+-2.1931 EIGHT -0.2218
+-2.1931 FIVE -0.2218
+-2.1931 FORTY_FIVE -0.2218
+-2.1931 FORWARD -0.2218
+-2.1931 FOUR -0.2218
+-2.1931 LEFT -0.2218
+-2.1931 METER -0.2218
+-2.1931 NEGATIVE -0.2218
+-2.1931 NINE -0.2218
+-2.1931 NINETY -0.2218
+-2.1931 ONE -0.2218
+-2.1931 RIGHT -0.2218
+-2.1931 ROTATE -0.2218
+-2.1931 SECONDS -0.2218
+-2.1931 SEVEN -0.2218
+-2.1931 SIX -0.2218
+-2.1931 SIXTY -0.2218
+-2.1931 TEN -0.2218
+-2.1931 THIRTY -0.2218
+-2.1931 THREE -0.2218
+-2.1931 TWO -0.2218
+
+\2-grams:
+-1.7160 <s> ACTIVATE 0.0000
+-1.7160 <s> AFFIRMATIVE 0.0000
+-1.7160 <s> BACKWARD 0.0000
+-1.7160 <s> CONFIRM 0.0000
+-1.7160 <s> DEGREES 0.0000
+-1.7160 <s> EIGHT 0.0000
+-1.7160 <s> FIVE 0.0000
+-1.7160 <s> FORTY_FIVE 0.0000
+-1.7160 <s> FORWARD 0.0000
+-1.7160 <s> FOUR 0.0000
+-1.7160 <s> LEFT 0.0000
+-1.7160 <s> METER 0.0000
+-1.7160 <s> NEGATIVE 0.0000
+-1.7160 <s> NINE 0.0000
+-1.7160 <s> NINETY 0.0000
+-1.7160 <s> ONE 0.0000
+-1.7160 <s> RIGHT 0.0000
+-1.7160 <s> ROTATE 0.0000
+-1.7160 <s> SECONDS 0.0000
+-1.7160 <s> SEVEN 0.0000
+-1.7160 <s> SIX 0.0000
+-1.7160 <s> SIXTY 0.0000
+-1.7160 <s> TEN 0.0000
+-1.7160 <s> THIRTY 0.0000
+-1.7160 <s> THREE 0.0000
+-1.7160 <s> TWO 0.0000
+-0.3010 ACTIVATE </s> -0.3010
+-0.3010 AFFIRMATIVE </s> -0.3010
+-0.3010 BACKWARD </s> -0.3010
+-0.3010 CONFIRM </s> -0.3010
+-0.3010 DEGREES </s> -0.3010
+-0.3010 EIGHT </s> -0.3010
+-0.3010 FIVE </s> -0.3010
+-0.3010 FORTY_FIVE </s> -0.3010
+-0.3010 FORWARD </s> -0.3010
+-0.3010 FOUR </s> -0.3010
+-0.3010 LEFT </s> -0.3010
+-0.3010 METER </s> -0.3010
+-0.3010 NEGATIVE </s> -0.3010
+-0.3010 NINE </s> -0.3010
+-0.3010 NINETY </s> -0.3010
+-0.3010 ONE </s> -0.3010
+-0.3010 RIGHT </s> -0.3010
+-0.3010 ROTATE </s> -0.3010
+-0.3010 SECONDS </s> -0.3010
+-0.3010 SEVEN </s> -0.3010
+-0.3010 SIX </s> -0.3010
+-0.3010 SIXTY </s> -0.3010
+-0.3010 TEN </s> -0.3010
+-0.3010 THIRTY </s> -0.3010
+-0.3010 THREE </s> -0.3010
+-0.3010 TWO </s> -0.3010
+
+\3-grams:
+-0.3010 <s> ACTIVATE </s>
+-0.3010 <s> AFFIRMATIVE </s>
+-0.3010 <s> BACKWARD </s>
+-0.3010 <s> CONFIRM </s>
+-0.3010 <s> DEGREES </s>
+-0.3010 <s> EIGHT </s>
+-0.3010 <s> FIVE </s>
+-0.3010 <s> FORTY_FIVE </s>
+-0.3010 <s> FORWARD </s>
+-0.3010 <s> FOUR </s>
+-0.3010 <s> LEFT </s>
+-0.3010 <s> METER </s>
+-0.3010 <s> NEGATIVE </s>
+-0.3010 <s> NINE </s>
+-0.3010 <s> NINETY </s>
+-0.3010 <s> ONE </s>
+-0.3010 <s> RIGHT </s>
+-0.3010 <s> ROTATE </s>
+-0.3010 <s> SECONDS </s>
+-0.3010 <s> SEVEN </s>
+-0.3010 <s> SIX </s>
+-0.3010 <s> SIXTY </s>
+-0.3010 <s> TEN </s>
+-0.3010 <s> THIRTY </s>
+-0.3010 <s> THREE </s>
+-0.3010 <s> TWO </s>
+
+\end\
