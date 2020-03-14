@@ -1,8 +1,11 @@
 # TUB-MSc_Thesis
 Optimizing Agent Behavior and Mitigating User Cognitive Load for Mixed Human-Robot Teams.
 
-# WORK-IN-PROGRESS
-This README will be complete in December 2019. The current Windows information is not provided (rather intuitive but will still be added at a later time). The current version has been used to setup the virtual environment (ROS, etc.) on four machines:
+This README covers the basic setup for using PocketSphinx with ROS Kinetic (Gazebo/RViz) and Unity.
+# SET-UP
+The current version has been used to setup the virtual environment (ROS, etc.) on two machines (unless ROSBridge and Websocket Protocol are used with an internal connection).
+
+A docker image will be created later to bypass the section below. For the time being, please follow these steps.
 
 
 Assuming this project is cloned and utilizing the file architecture:
